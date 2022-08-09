@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { View, Text, ScrollView, Dimensions, TouchableOpacity } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontSize from "../components/FontSize";
@@ -18,7 +18,8 @@ const Hymn = ({route, navigation}) => {
     const [ isDarkMode, setDarkMode ] = DarkMode
     const [ fontSize, setFontSize] = FontSizeValue
 
-    const { hymn } = route.params
+    let { hymn: hymnArray } = route.params
+    const hymn = {id:hymnArray.id, title: hymnArray.title, text:JSON.parse(hymnArray.hymn)}
 
     const styles = {
         shadow:{
@@ -43,6 +44,10 @@ const Hymn = ({route, navigation}) => {
             width: width *.95
         }
     }
+    useEffect(()=> {
+        console.log(hymnArray)
+    },[])
+
 
     
     return (

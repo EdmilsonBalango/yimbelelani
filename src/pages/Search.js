@@ -20,7 +20,7 @@ const Search = ({navigation}) => {
         const isNumValidadet = isNaN(hymnToOpen)
         if (!isNumValidadet && hymnToOpen > 0 && hymnToOpen < 193){
             navigation.navigate('Hymn', {hymn: listHymns[hymnToOpen - 1]})
-            // console.log(listHymns[191])
+            // console.log(listHymns[hymnToOpen - 1])
             return
         }
         return alert('número inválido')
