@@ -22,9 +22,6 @@ const HymnList = ({navigation}) => {
         }
     }
 
-    // console.log('Lista', listHymns)
-
-    
     return (
         <View >
             <View style={{...styles.shadow, height: 60, backgroundColor: isDarkMode ? darkTheme.darkBackgroundColor : lightTheme.lightBackgroundColor, paddingHorizontal: 10, justifyContent: "space-between", flexDirection: "row", alignItems: "center"}}>

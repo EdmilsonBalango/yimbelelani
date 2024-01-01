@@ -1,12 +1,9 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import {NavigationContainer} from '@react-navigation/native'
 import { createStackNavigator } from "@react-navigation/stack";
-import react from "react";
-import {View, Text,  StatusBar} from 'react-native'
 import DrawerContainer from "../components/DrawerContainer";
 import { HymnListIcon, HomeIcon, HomeOutline, HymnListOutlineIcon, StarIcon } from "../components/icons";
 import Search from "../pages/Search";
-import IonicIcons from 'react-native-vector-icons/Ionicons'
 import HymnList from "../pages/HymnsList";
 import Favorite from "../pages/Favorite";
 import Hymn from "../pages/Hymn";
